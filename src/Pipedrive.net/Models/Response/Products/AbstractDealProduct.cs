@@ -64,5 +64,11 @@ namespace Pipedrive
 
         [JsonProperty("quantity")]
         public long Quantity { get; set; }
+
+        [JsonProperty("billing_start_date")]
+        public DateTime? BillingStartDate { get; set; }
+
+        [JsonProperty("billing_frequency")]
+        public string BillingFrequency { get; set; }
     }
 }
