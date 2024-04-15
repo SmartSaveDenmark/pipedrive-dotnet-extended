@@ -1,11 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
-
+    <TargetFrameworks>net8.0</TargetFrameworks>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
-
   <ItemGroup>
     <None Remove="Fixtures\image.jpg" />
     <None Remove="Fixtures\webhook_activity_update.json" />
@@ -15,7 +12,6 @@
     <None Remove="Fixtures\webhook_person_update.json" />
     <None Remove="Fixtures\webhook_person_update_import.json" />
   </ItemGroup>
-
   <ItemGroup>
     <EmbeddedResource Include="Fixtures\image.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -39,7 +35,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
@@ -53,17 +48,17 @@
     </PackageReference>
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Pipedrive.net\Pipedrive.csproj" />
   </ItemGroup>
-
-  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
-
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties />
+    </VisualStudio>
+  </ProjectExtensions>
   <PropertyGroup>
     <CodeAnalysisRuleSet>..\..\pipedrive.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-
   <ItemGroup>
     <AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
   </ItemGroup>
